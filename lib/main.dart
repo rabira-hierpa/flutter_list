@@ -20,6 +20,7 @@ List<Quotes> quotes =[
   Quotes(text:'እስከ ዛሬ መቃብሩ ባዶ የሆነው የኢየሱስ ብቻ ነው',author:'ረብራ ሂርጳ'),
 ];
 
+// Can use custom functions to return a custom widget
 Widget quoteTemplate(quote){
   return new QuoteCard(quote: quote);
 }
@@ -33,7 +34,7 @@ Widget quoteTemplate(quote){
         backgroundColor: Colors.redAccent,
       ),
       body: Column(
-        children: quotes.map((quote) =>  quoteTemplate(quote)).toList() ,
+        children: quotes.map((quote) =>  QuoteCard(quote: quote)).toList() ,
       ),
     );
   }
